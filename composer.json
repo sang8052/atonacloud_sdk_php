@@ -1,0 +1,23 @@
+{
+    "name": "atonalcloud/sdk_php",
+    "description": "Atonal Cloud PHP SDK",
+    "type": "project",
+    "require": {
+        "php": ">=7.0"
+    },
+    "license": " Apache-2.0 License",
+    "authors": [
+        {
+            "name": "sudemqaq",
+            "email": "sudem.sang@atonal.tech"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Atonal_Public\\": "src/Atonal_Public",
+            "Atonal_Auth\\": "src/Atonal_Auth",
+            "Atonal_OAuth\\": "src/Atonal_OAuth"
+        }
+    },
+    "minimum-stability": "beta"
+}
