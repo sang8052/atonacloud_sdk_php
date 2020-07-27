@@ -1,6 +1,6 @@
 {
     "name": "atonalcloud/sdk_php",
-    "description": "Atonal Cloud PHP SDK",
+    "description": "Atonal Cloud PHP SDK V1",
     "type": "project",
     "require": {
         "php": ">=7.0"
