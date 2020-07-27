@@ -19,5 +19,6 @@
             "Atonal_OAuth\\": "src/Atonal_OAuth"
         }
     },
-    "minimum-stability": "beta"
+    "minimum-stability": "beta",
+    "version":"1.0"
 }
