@@ -19,7 +19,9 @@
  二、安装
  
     强烈建议使用 composer 进行安装  
-    composer require atonalcloud/sdk_php
+    暂未发布稳定版本 ，请在安装时指定版本号
+    composer require atonalcloud/sdk_php 1.0.beta
+    
     
  三、支持的API 应用列表
  
