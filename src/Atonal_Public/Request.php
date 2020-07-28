@@ -22,7 +22,7 @@ class Request
     }
 
     public function CURL_RES_ERROR(){
-        return "ERROR CODE:".$this->errno."\nERROR MSG:".$this->error;
+
     }
 
     public function CURL_GET($url,$time=false,$ua=false ){
@@ -40,7 +40,7 @@ class Request
         if($data=="") {
             $this->error = curl_error($curl);
             $this->errno = curl_errno($curl);
-            $data = "CURL REQUEST_ERROR:".$this->errno;
+            return "ERROR CODE:".$this->errno."\nERROR MSG:".$this->error;
         }
         curl_close($curl);
         return $data;
@@ -57,7 +57,6 @@ class Request
         curl_setopt($curl, CURLOPT_POST, 1);
 
         curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
-        print_r($post);
         if($isjson){
             curl_setopt($curl, CURLOPT_HEADER, 0);
             curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8', 'Content-Length:' .strlen($post)));
@@ -69,9 +68,9 @@ class Request
 
         $data = curl_exec($curl);
         if($data=="") {
-            $this->error = curl_error();
-            $this->errno = curl_errno();
-            $data = "CURL REQUEST_ERROR:".$this->errno;
+            $this->error = curl_error($curl);
+            $this->errno = curl_errno($curl);
+            return "ERROR CODE:".$this->errno."\nERROR MSG:".$this->error;
         }
         curl_close($curl);
         return $data;
